@@ -4,11 +4,11 @@ EEE 333 Lab 3
 A UART transmitter and receiver in SystemVerilog. Sends a byte serially with start/stop bits, then receives it and displays the result on two hex displays.
 
 ## What's in it
-- UART_tx — three-state FSM (RS / LD / TX). Loads the byte into a 10-bit buffer (start, 8 data, stop) and shifts it out one bit per baud tick.
-- UART_rx — three-state FSM (RST / DET / REC). Waits for a start bit, samples 10 bits per baud tick, then pulses rx_ready when a full byte is received.
-- BAUD_rate_gen — parameterized counter that produces a one-cycle baud_tick at the configured rate.
-- Hex7Seg — 4-bit hex to 7-segment decoder for the FPGA hex displays.
-- UART_pv — top-level wrapper for the prototype board, loops TX into RX, and displays the received byte.
+- UART_tx - three-state FSM (RS / LD / TX). Loads the byte into a 10-bit buffer (start, 8 data, stop) and shifts it out one bit per baud tick.
+- UART_rx - three-state FSM (RST / DET / REC). Waits for a start bit, samples 10 bits per baud tick, then pulses rx_ready when a full byte is received.
+- BAUD_rate_gen - parameterized counter that produces a one-cycle baud_tick at the configured rate.
+- Hex7Seg - 4-bit hex to 7-segment decoder for the FPGA hex displays.
+- UART_pv - top-level wrapper for the prototype board, loops TX into RX, and displays the received byte.
 
 ## Files
 Lab3.sv — all modules + testbench
