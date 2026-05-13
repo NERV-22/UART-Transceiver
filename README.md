@@ -1,7 +1,7 @@
 # UART-Transceiver
 EEE 333 Lab 3
 
-A UART transmitter and receiver in SystemVerilog. Sends a byte serially with start/stop bits, then receives it and displays the result on two hex displays.
+A UART transmitter and receiver in SystemVerilog. Sends a byte with start/stop bits, then receives it and displays the result on two hex displays on a board (Terasic DE10-Lite).
 
 ## What's in it
 - UART_tx - three-state FSM (RS / LD / TX). Loads the byte into a 10-bit buffer (start, 8 data, stop) and shifts it out one bit per baud tick.
@@ -14,7 +14,7 @@ A UART transmitter and receiver in SystemVerilog. Sends a byte serially with sta
 Lab3.sv — all modules + testbench
 
 ## How to simulate
-Open in ModelSim/Questa, compile Lab3.sv, run UART_TB. Testbench sends two bytes (0x20 and 0x45), loops TX into RX, and prints the received bytes.
+Open in ModelSim, compile Lab3.sv, and run UART_TB. Testbench sends two bytes (0x20 and 0x45), loops TX into RX, and prints the received bytes.
 
 ## Waveform
 <img width="936" height="277" alt="image" src="https://github.com/user-attachments/assets/ec5f6c0d-c8c2-4df1-b70d-ca65cb0f01dc" />
